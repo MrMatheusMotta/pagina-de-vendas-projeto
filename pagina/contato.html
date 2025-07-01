@@ -1,29 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EMPÓRIO LUMO</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato - EMPÓRIO LUMO</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-     <header>
-        <nav>
-            <ul>
-                <li class="linkHeader">
-                    <a href="home.html"><img src="./icons/casa.png" alt="" />Início</a>
-                </li>
-                <li class="linkHeader">
-                    <a href="sobre.html"><img src="./icons/coracao.png" alt="" />Sobre</a>
-                </li>
-                <li class="linkHeader">
-                    <a href="contato.html"><img src="./icons/chamada-telefonica.png" alt="" />Contato</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
 
+  <header class="header-com-logo">
+    <nav>
+      <ul>
+        <li class="linkHeader">
+          <a href="home.html"><img src="./icons/casa.png" alt="Ícone de Casa" />Início</a> </li>
+        <li class="linkHeader">
+          <a href="sobre.html"><img src="./icons/coracao.png" alt="Ícone de Coração" />Sobre</a>
+        </li>
+        <li class="linkHeader">
+          <a href="contato.html"><img src="./icons/chamada-telefonica.png" alt="Ícone de Telefone" />Contato</a>
+        </li>
+      </ul>
+    </nav>
+    <a href="home.html#carrinho" class="carrinho-div"> <i class="fas fa-shopping-cart"></i>
+      <span id="contador-carrinho" class="contador-carrinho">0</span>
+    </a>
+  </header>
 
-    <script src="script.js"></script>
+  <main class="page-content">
+    <section class="conteudo-pagina">
+      <h2>Fale Conosco</h2>
+      <p>Tem alguma dúvida, sugestão ou precisa de ajuda? Entre em contato conosco pelos canais abaixo:</p>
+      
+      <div class="contato-info">
+        <p><i class="fas fa-envelope"></i> E-mail: <a href="mailto:contato@emporiolumo.com.br">contato@emporiolumo.com.br</a></p>
+        <p><i class="fas fa-phone"></i> Telefone: (XX) XXXX-XXXX</p>
+        <p><i class="fab fa-whatsapp"></i> WhatsApp: (XX) XXXXX-XXXX</p>
+        <p><i class="fas fa-map-marker-alt"></i> Endereço: Rua dos Sabores, 123 - Centro, Sua Cidade - UF</p>
+      </div>
+
+      <div class="contato-form">
+        <h3>Envie uma Mensagem</h3>
+        <form>
+          <div class="form-grupo">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+          </div>
+          <div class="form-grupo">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-grupo">
+            <label for="assunto">Assunto:</label>
+            <input type="text" id="assunto" name="assunto">
+          </div>
+          <div class="form-grupo">
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn-enviar-mensagem">Enviar Mensagem</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <span>&copy; 2025 EMPÓRIO LUMO - Todos os direitos reservados.</span>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

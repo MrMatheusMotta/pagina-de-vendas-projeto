@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,153 +7,63 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
 
-  <header>
+  <header class="header-com-logo">
     <nav>
       <ul>
         <li class="linkHeader">
-          <a href="home.html"><img src="./icons/casa.png" alt="" />Início</a>
-        </li>
-
+          <a href="home.html"><img src="./icons/casa.png" alt="Ícone de Casa" />Início</a> </li>
         <li class="linkHeader">
-          <a href="sobre.html"><img src="./icons/coracao.png" alt="" />Sobre</a>
+          <a href="sobre.html"><img src="./icons/coracao.png" alt="Ícone de Coração" />Sobre</a>
         </li>
-
         <li class="linkHeader">
-          <a href="contato.html"><img src="./icons/chamada-telefonica.png" alt="" />Contato</a>
+          <a href="contato.html"><img src="./icons/chamada-telefonica.png" alt="Ícone de Telefone" />Contato</a>
         </li>
       </ul>
     </nav>
-    <a href="/carrinho.html" class="carrinho-div">
+    <a href="#carrinho" class="carrinho-div">
       <i class="fas fa-shopping-cart"></i>
+      <span id="contador-carrinho" class="contador-carrinho">0</span>
     </a>
   </header>
 
-
-  </div>
-
   <main>
+    <section class="secao-loja">
+      <h2>Nosso Catálogo</h2>
+      <div id="loja">
+        </div>
+    </section>
+
+    <section class="secao-carrinho" id="carrinho">
+      <h2>Seu Carrinho de Compras</h2>
+      <div id="itens-carrinho">
+        <p>Seu carrinho está vazio.</p>
+      </div>
+      <div class="total-carrinho">
+        <p>Total: <span id="valor-total-carrinho">R$ 0,00</span></p>
+        <button class="btn-finalizar-compra">Finalizar Compra</button>
+      </div>
+    </section>
     
-    <div id="loja">
-      <div class="produtos">
-        <h3>produtox</h3>
-        <img src="./img/amendoa.png" alt="">
-        <p>R$ 20,00</p>
-        <div class="acoes-produto">
-          <button class="botao-carrinho" title="Adicionar ao carrinho">
-            <i class="fas fa-shopping-cart"></i>
-          </button>
-        </div>
+    <section class="secao-carrossel">
+      <h2>Produtos em Oferta</h2>
+      <div class="carrossel-container">
+        <button class="carrossel-btn prev"><i class="fas fa-chevron-left"></i></button>
+        <div class="carrossel-produtos" id="carrossel-produtos">
+          </div>
+        <button class="carrossel-btn next"><i class="fas fa-chevron-right"></i></button>
       </div>
+    </section>
 
-      <div class="produtos">
-        <h3>produtox</h3>
-        <img src="./img/semente-de-abobora.png" alt="">
-        <p>R$ 20,00</p>
-        <div class="acoes-produto">
-          <button class="botao-carrinho" title="Adicionar ao carrinho">
-            <i class="fas fa-shopping-cart"></i>
-          </button>
-        </div>
-      </div>
-
-      <div class="produtos">
-        <h3>produtox</h3>
-        <img src="./img/NATURAL Sim.png" alt="">
-        <p>R$ 20,00</p>
-        <div class="acoes-produto">
-          <button class="botao-carrinho" title="Adicionar ao carrinho">
-            <i class="fas fa-shopping-cart"></i>
-          </button>
-        </div>
-      </div>
-
-      <div class="produtos">
-        <h3>produtox</h3>
-        <img src="./img/mix-crocante.png" alt="">
-        <p>R$ 20,00</p>
-        <div class="acoes-produto">
-          <button class="botao-carrinho" title="Adicionar ao carrinho">
-            <i class="fas fa-shopping-cart"></i>
-          </button>
-        </div>
-      </div>
-
-      <div class="produtos">
-        <h3>produtox</h3>
-        <img src="./img/grao-de-bico-mostarda-e-mel-kg.png" alt="">
-        <p>R$ 20,00</p>
-        <div class="acoes-produto">
-          <button class="botao-carrinho" title="Adicionar ao carrinho">
-            <i class="fas fa-shopping-cart"></i>
-          </button>
-        </div>
-      </div>
-
-      <div class="produtos">
-        <h3>produtox</h3>
-        <img src="./img/castanha-do-para.png" alt="">
-        <p>R$ 20,00</p>
-        <div class="acoes-produto">
-          <button class="botao-carrinho" title="Adicionar ao carrinho">
-            <i class="fas fa-shopping-cart"></i>
-          </button>
-        </div>
-      </div>
-
-      <div class="produtos">
-        <h3>produtox</h3>
-        <img src="./img/amendoins-sortidos.png" alt="">
-        <p>R$ 20,00</p>
-        <div class="acoes-produto">
-          <button class="botao-carrinho" title="Adicionar ao carrinho">
-            <i class="fas fa-shopping-cart"></i>
-          </button>
-        </div>
-      </div>
-
-      <div class="produtos">
-        <h3>produtox</h3>
-        <img src="./img/amendoim.png" alt="">
-        <p>R$ 20,00</p>
-        <div class="acoes-produto">
-          <button class="botao-carrinho" title="Adicionar ao carrinho">
-            <i class="fas fa-shopping-cart"></i>
-          </button>
-        </div>
-      </div>
-      <div class="produtos">
-        <h3>produtox</h3>
-        <img src="./img/amendoim-torrado.png" alt="">
-        <p>R$ 20,00</p>
-        <div class="acoes-produto">
-          <button class="botao-carrinho" title="Adicionar ao carrinho">
-            <i class="fas fa-shopping-cart"></i>
-          </button>
-        </div>
-      </div>
-
-      <div class="produtos">
-        <h3>produtox</h3>
-        <img src="./img/amendoim-doce.png" alt="">
-        <p>R$ 20,00</p>
-        <div class="acoes-produto">
-          <button class="botao-carrinho" title="Adicionar ao carrinho">
-            <i class="fas fa-shopping-cart"></i>
-          </button>
-        </div>
-      </div>
-
-    </div>
-    
   </main>
   
   <footer>
     <span>&copy; 2025 EMPÓRIO LUMO - Todos os direitos reservados.</span>
   </footer>
+
+  <div id="toast-container"></div>
+  
   <script src="script.js"></script>
 </body>
-
 </html>

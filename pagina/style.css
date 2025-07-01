@@ -1,196 +1,545 @@
-*{
+/* Estilos gerais */
+body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
 }
 
-header{
-    background-image: url(/pagina/img/logo.png);
-    background-size: 100% 200px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    padding: 16px 0;
+h1, h2, h3 {
+    color: #444;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header */
+.header-com-logo { /* Nova classe para o header */
+    background-image: url('./img/logo.png'); /* Sua imagem de logo */
+    background-size: cover; /* Ajusta a imagem para cobrir o header */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat;
+    background-color: #4CAF50; /* Cor de fallback se a imagem não carregar */
+    height: 120px; /* Altura do header com a logo */
+    position: relative; /* Para posicionar o overlay e nav */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px; /* Ajuste de padding */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.header-com-logo::before { /* Overlay escuro para melhorar contraste */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 200px;   
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Escurece a logo para o texto aparecer */
+    z-index: 1; /* Fica abaixo do nav e carrinho */
 }
 
-header nav{
-  margin-top: 160px;
-  font-weight: bold;
+header nav {
+    position: relative; /* Para garantir que o nav esteja acima do overlay */
+    z-index: 2; /* Fica acima do overlay */
 }
 
-header nav li img{
-    width: 20px;
-}
-
-body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: #f7f7f7;
-  color: #222;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-
-ul {
-  display: flex;
-  gap: 32px;
-  list-style: none;
-  justify-content: center;
-  align-items: center;
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 25px;
 }
 
 .linkHeader a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-  color: #222;
-  font-weight: 500;
-  transition: color 0.2s;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
 }
 
 .linkHeader a:hover {
-  color: #4e9c5e;
+    color: #dcdcdc;
 }
 
-
-main {
-  flex: 1;
-  max-width: 1100px;
-  margin: 32px auto;
-  width: 95%;
-}
-
-#carrinho-div {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 24px;
-  margin-top: 12px;
-  margin-right: 32px;
-}
-
-#carrinho-div img {
-  width: 38px;
-  height: 38px;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-#carrinho-div img:hover {
-  transform: scale(1.1);
-}
-
-#loja {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 28px;
-}
-
-.produtos {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-  padding: 18px 12px 16px 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: box-shadow 0.2s;
-}
-
-.produtos:hover {
-  box-shadow: 0 4px 18px rgba(78,156,94,0.13);
-}
-
-.produtos img {
-  width: 90px;
-  height: 90px;
-  object-fit: contain;
-  margin-bottom: 12px;
-}
-
-.produtos h3 {
-  font-size: 1.1rem;
-  margin-bottom: 8px;
-  color: #4e9c5e;
-  text-align: center;
-}
-
-.produtos p {
-  font-size: 1.05rem;
-  font-weight: bold;
-  color: #222;
-  margin-top: 6px;
-}
-
-footer {
-  background: #4e9c5e;
-  color: #fff;
-  text-align: center;
-  padding: 18px 0;
-  font-size: 1rem;
-  letter-spacing: 1px;
-  margin-top: 32px;
-}
-
-.oculto {
-  display: none;
-}
-
-@media (max-width: 600px) {
-  #listasHeader {
-    gap: 12px;
-    font-size: 0.98rem;
-  }
-  #loja {
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-  }
-  .produtos img {
-    width: 70px;
-    height: 70px;
-  }
+.linkHeader img {
+    width: 22px;
+    height: 22px;
+    margin-right: 8px;
+    filter: invert(100%);
 }
 
 .carrinho-div {
-  position: absolute;
-  top: 210px;
-  right: 30px;
-  z-index: 10;
-  font-size: 2.5rem; 
-  color: #fff;   
-  background: #ff9800;
-  border-radius: 50%;
-  padding: 12px 18px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-  transition: background 0.2s, color 0.2s;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    position: relative;
+    z-index: 2; /* Fica acima do overlay */
+    transition: color 0.3s ease;
 }
-
 
 .carrinho-div:hover {
-  background: #fff;
-  color: #ff9800;
+    color: #dcdcdc;
 }
-header {
-  position: relative; 
+
+.contador-carrinho {
+    background-color: #ff5722;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 7px;
+    font-size: 0.7em;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    min-width: 18px;
+    text-align: center;
+    line-height: 1;
+    z-index: 3; /* Garante que o contador esteja no topo */
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* Seções (geral) */
+.secao-loja, .secao-carrinho, .secao-carrossel, .conteudo-pagina {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    padding: 25px;
+}
+
+.secao-loja h2, .secao-carrinho h2, .secao-carrossel h2, .conteudo-pagina h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #2e7d32;
+}
+
+/* Estilos dos Cards de Produto (usado para loja e carrossel) */
+.produto-card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    padding: 15px;
+    text-align: center;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.produto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.produto-card img {
+    max-width: 100%;
+    height: 160px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.produto-card h3 {
+    font-size: 1.15em;
+    margin: 10px 0;
+    color: #555;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.produto-card p {
+    font-size: 0.95em;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.produto-preco {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #388e3c;
+    margin-top: auto;
+    margin-bottom: 15px;
+}
+
+.acoes-produto {
+    margin-top: 10px;
 }
 
 .botao-carrinho {
-      margin-top: auto;
-      padding: 10px 15px;
-      background: #28a745;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background 0.3s;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.botao-carrinho:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos da Loja Principal */
+#loja {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+    justify-content: center;
+}
+
+/* Estilos do Carrossel */
+.carrossel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Esconde os produtos que estão fora da vista */
+    margin-top: 20px;
+    padding: 0 50px; /* Espaço para os botões de navegação */
+    box-sizing: border-box;
+}
+
+.carrossel-produtos {
+    display: flex;
+    /* transition: transform 0.5s ease-in-out; Removido para ser controlado pelo JS */
+    gap: 20px; /* Espaçamento entre os itens do carrossel */
+    justify-content: flex-start; /* Alinha os itens à esquerda no carrossel */
+}
+
+.produto-carrossel {
+    /* Ajustado para acomodar os CARROUSSEL_DISPLAY_COUNT */
+    flex: 0 0 calc((100% / var(--carroussel-display-count)) - (var(--carroussel-gap) * (var(--carroussel-display-count) - 1) / var(--carroussel-display-count)));
+    max-width: calc((100% / var(--carroussel-display-count)) - (var(--carroussel-gap) * (var(--carroussel-display-count) - 1) / var(--carroussel-display-count)));
+    min-width: 250px; /* Para garantir que não fique pequeno demais em telas grandes */
+    box-sizing: border-box;
+}
+
+/* Variáveis CSS para o carrossel (para JS conseguir ler o gap) */
+:root {
+    --carroussel-display-count: 3; /* Padrão, será sobrescrito via JS para responsividade se necessário */
+    --carroussel-gap: 20px;
+}
+
+
+.carrossel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px 10px;
+    cursor: pointer;
+    font-size: 1.5em;
+    z-index: 10;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.carrossel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.carrossel-btn.prev {
+    left: 10px;
+}
+
+.carrossel-btn.next {
+    right: 10px;
+}
+
+/* Estilos do Carrinho */
+.secao-carrinho {
+    margin-top: 40px;
+}
+
+#itens-carrinho {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 15px;
+    min-height: 100px;
+    background-color: #fdfdfd;
+}
+
+.item-carrinho {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.item-carrinho:last-child {
+    border-bottom: none;
+}
+
+.item-carrinho img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.item-carrinho span {
+    flex-grow: 1;
+    font-size: 1.05em;
+    color: #555;
+}
+
+.item-carrinho .btn-remover-carrinho {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.item-carrinho .btn-remover-carrinho:hover {
+    background-color: #c82333;
+}
+
+.total-carrinho {
+    text-align: right;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px dashed #ddd;
+}
+
+.total-carrinho p {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #28a745;
+    margin-bottom: 15px;
+}
+
+.btn-finalizar-compra {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-finalizar-compra:hover {
+    background-color: #218838;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+/* Estilos para o Toast (Mini-Carrinho) */
+#toast-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1050;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+}
+
+.toast-notificacao {
+    background-color: #333;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: opacity 0.5s ease-out, transform 0.3s ease-out;
+    transform: translateX(0);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.toast-notificacao.hide {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.toast-notificacao i {
+    font-size: 1.2em;
+}
+
+.toast-adicionado {
+    background-color: #4CAF50;
+}
+
+.toast-removido {
+    background-color: #dc3545;
+}
+
+/* Estilos para as páginas Sobre e Contato */
+.page-content {
+    padding-top: 20px;
+}
+
+.conteudo-pagina {
+    margin: 0 auto;
+    padding: 30px;
+    max-width: 900px;
+    line-height: 1.8;
+    font-size: 1.1em;
+}
+
+.conteudo-pagina p {
+    margin-bottom: 15px;
+}
+
+/* Estilos específicos do Contato */
+.contato-info p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.contato-info i {
+    color: #4CAF50;
+    font-size: 1.2em;
+}
+
+.contato-form {
+    margin-top: 30px;
+    background-color: #fdfdfd;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 25px;
+}
+
+.form-grupo {
+    margin-bottom: 15px;
+}
+
+.form-grupo label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-grupo input[type="text"],
+.form-grupo input[type="email"],
+.form-grupo textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.form-grupo textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.btn-enviar-mensagem {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-enviar-mensagem:hover {
+    background-color: #0056b3;
+}
+
+
+/* Media Queries para responsividade */
+@media (max-width: 900px) { /* Ajuste o breakpoint conforme necessário */
+    :root {
+        --carroussel-display-count: 2; /* Em telas médias, exibe 2 itens */
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding-bottom: 15px;
+    }
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-top: 15px;
+    }
+    .carrinho-div {
+        margin-top: 15px;
+    }
+    .carrossel-btn {
+        padding: 10px 5px;
+        font-size: 1.2em;
+    }
+    .carrossel-container {
+        padding: 0 30px;
+    }
+    .produto-carrossel {
+        min-width: 200px;
+    }
+    .item-carrinho {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+    .item-carrinho span:nth-of-type(1) {
+        flex-basis: 100%;
+        margin-top: 5px;
+    }
+    .toast-notificacao {
+        width: calc(100% - 40px);
+        left: 20px;
+        right: 20px;
+        bottom: 10px;
+    }
+    .toast-notificacao.hide {
+        transform: translateY(100%);
+    }
+    .conteudo-pagina {
+        padding: 20px;
     }
 
-    .botao-carrinho:hover {
-      background: #218838;
+    /* Responsividade do Carrossel para mobile */
+    :root {
+        --carroussel-display-count: 1; /* Em telas pequenas, exibe 1 item */
     }
+    .produto-carrossel {
+        min-width: unset; /* Remove min-width fixo */
+    }
+}

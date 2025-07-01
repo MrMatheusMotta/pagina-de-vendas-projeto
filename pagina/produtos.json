@@ -1,15 +1,82 @@
 [
   {
     "ID": 1,
-    "PRODUTO": "Grão tal",
-    "PRECO": "60.89",
-    "DETALHE": "CASTANHA DO PARÁ",
-    "IMAGEM": "",
-
+    "PRODUTO": "Amêndoa",
+    "PRECO": 35.0,
+    "DETALHE": "100g",
+    "IMAGEM": "img/amendoa.png",
+    "OFERTA": false
+  },
+  {
     "ID": 2,
-    "PRODUTO": "Grão tal",
-    "PRECO": "150.00",
-    "DETALHE": "CASTANHA DE CAJU",
-    "IMAGEM":""
+    "PRODUTO": "Amendoim Doce",
+    "PRECO": 25.0,
+    "DETALHE": "500g",
+    "IMAGEM": "img/amendoim-doce.png",
+    "OFERTA": true
+  },
+  {
+    "ID": 3,
+    "PRODUTO": "Amendoim Torrado",
+    "PRECO": 20.0,
+    "DETALHE": "500g",
+    "IMAGEM": "img/amendoim-torrado.png",
+    "OFERTA": false
+  },
+  {
+    "ID": 4,
+    "PRODUTO": "Amendoim in Natura",
+    "PRECO": 18.0,
+    "DETALHE": "500g",
+    "IMAGEM": "img/amendoim.png",
+    "OFERTA": false
+  },
+  {
+    "ID": 5,
+    "PRODUTO": "Amendoins Sortidos",
+    "PRECO": 28.0,
+    "DETALHE": "500g",
+    "IMAGEM": "img/amendoins-sortidos.png",
+    "OFERTA": true
+  },
+  {
+    "ID": 6,
+    "PRODUTO": "Castanha do Pará",
+    "PRECO": 55.0,
+    "DETALHE": "500g",
+    "IMAGEM": "img/castanha-do-para.png",
+    "OFERTA": false
+  },
+  {
+    "ID": 7,
+    "PRODUTO": "Grão-de-bico mostarda e mel",
+    "PRECO": 35.0,
+    "DETALHE": "500g",
+    "IMAGEM": "img/grao-de-bico-mostarda-e-mel-kg.png",
+    "OFERTA": false
+  },
+  {
+    "ID": 8,
+    "PRODUTO": "Mix Crocante",
+    "PRECO": 50.0,
+    "DETALHE": "500g",
+    "IMAGEM": "img/mix-crocante.png",
+    "OFERTA": true
+  },
+  {
+    "ID": 9,
+    "PRODUTO": "Semente de Abóbora",
+    "PRECO": 20.0,
+    "DETALHE": "500g",
+    "IMAGEM": "img/semente-de-abobora.png",
+    "OFERTA": false
+  },
+  {
+    "ID": 10,
+    "PRODUTO": "Soja",
+    "PRECO": 15.0,
+    "DETALHE": "500g",
+    "IMAGEM": "img/soja.jpg",
+    "OFERTA": false
   }
 ]
