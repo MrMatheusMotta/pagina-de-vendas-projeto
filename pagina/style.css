@@ -8,7 +8,9 @@ body {
     line-height: 1.6;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: #444;
 }
 
@@ -17,38 +19,38 @@ a {
     color: inherit;
 }
 
-/* Header */
-.header-com-logo { /* Nova classe para o header */
-    background-image: url('./img/logo.png'); /* Sua imagem de logo */
-    background-size: cover; /* Ajusta a imagem para cobrir o header */
-    background-position: center; /* Centraliza a imagem */
+
+.header-com-logo {
+    background-image: url('./img/logo.png');
+    background-size: 100% 200px;
+    background-position: center;
     background-repeat: no-repeat;
-    background-color: #4CAF50; /* Cor de fallback se a imagem não carregar */
-    height: 120px; /* Altura do header com a logo */
-    position: relative; /* Para posicionar o overlay e nav */
+    background-color: #4CAF50;
+    height: 200px;
+    position: relative;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 25px; /* Ajuste de padding */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    padding: 0 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     z-index: 1000;
 }
 
-.header-com-logo::before { /* Overlay escuro para melhorar contraste */
+.header-com-logo::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Escurece a logo para o texto aparecer */
-    z-index: 1; /* Fica abaixo do nav e carrinho */
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
 }
 
 header nav {
-    position: relative; /* Para garantir que o nav esteja acima do overlay */
-    z-index: 2; /* Fica acima do overlay */
+    position: relative;
+    z-index: 2;
 }
 
 header nav ul {
@@ -85,7 +87,7 @@ header nav ul {
     font-size: 24px;
     text-decoration: none;
     position: relative;
-    z-index: 2; /* Fica acima do overlay */
+    z-index: 2;
     transition: color 0.3s ease;
 }
 
@@ -105,36 +107,42 @@ header nav ul {
     min-width: 18px;
     text-align: center;
     line-height: 1;
-    z-index: 3; /* Garante que o contador esteja no topo */
+    z-index: 3;
 }
 
-/* Main Content */
+
 main {
     padding: 20px;
     max-width: 1200px;
     margin: 20px auto;
 }
 
-/* Seções (geral) */
-.secao-loja, .secao-carrinho, .secao-carrossel, .conteudo-pagina {
+
+.secao-loja,
+.secao-carrinho,
+.secao-carrossel,
+.conteudo-pagina {
     background-color: white;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
     padding: 25px;
 }
 
-.secao-loja h2, .secao-carrinho h2, .secao-carrossel h2, .conteudo-pagina h2 {
+.secao-loja h2,
+.secao-carrinho h2,
+.secao-carrossel h2,
+.conteudo-pagina h2 {
     text-align: center;
     margin-bottom: 25px;
     color: #2e7d32;
 }
 
-/* Estilos dos Cards de Produto (usado para loja e carrossel) */
+
 .produto-card {
     border: 1px solid #eee;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     padding: 15px;
     text-align: center;
     background-color: #fff;
@@ -146,7 +154,7 @@ main {
 
 .produto-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .produto-card img {
@@ -198,7 +206,6 @@ main {
     background-color: #0056b3;
 }
 
-/* Estilos da Loja Principal */
 #loja {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -206,34 +213,30 @@ main {
     justify-content: center;
 }
 
-/* Estilos do Carrossel */
 .carrossel-container {
     position: relative;
     width: 100%;
-    overflow: hidden; /* Esconde os produtos que estão fora da vista */
+    overflow: hidden;
     margin-top: 20px;
-    padding: 0 50px; /* Espaço para os botões de navegação */
+    padding: 0 50px;
     box-sizing: border-box;
 }
 
 .carrossel-produtos {
     display: flex;
-    /* transition: transform 0.5s ease-in-out; Removido para ser controlado pelo JS */
-    gap: 20px; /* Espaçamento entre os itens do carrossel */
-    justify-content: flex-start; /* Alinha os itens à esquerda no carrossel */
+    gap: 20px;
+    justify-content: flex-start;
 }
 
 .produto-carrossel {
-    /* Ajustado para acomodar os CARROUSSEL_DISPLAY_COUNT */
     flex: 0 0 calc((100% / var(--carroussel-display-count)) - (var(--carroussel-gap) * (var(--carroussel-display-count) - 1) / var(--carroussel-display-count)));
     max-width: calc((100% / var(--carroussel-display-count)) - (var(--carroussel-gap) * (var(--carroussel-display-count) - 1) / var(--carroussel-display-count)));
-    min-width: 250px; /* Para garantir que não fique pequeno demais em telas grandes */
+    min-width: 250px;
     box-sizing: border-box;
 }
 
-/* Variáveis CSS para o carrossel (para JS conseguir ler o gap) */
 :root {
-    --carroussel-display-count: 3; /* Padrão, será sobrescrito via JS para responsividade se necessário */
+    --carroussel-display-count: 3;
     --carroussel-gap: 20px;
 }
 
@@ -265,7 +268,6 @@ main {
     right: 10px;
 }
 
-/* Estilos do Carrinho */
 .secao-carrinho {
     margin-top: 40px;
 }
@@ -348,7 +350,6 @@ main {
     background-color: #218838;
 }
 
-/* Footer */
 footer {
     background-color: #333;
     color: white;
@@ -358,7 +359,6 @@ footer {
     font-size: 0.9em;
 }
 
-/* Estilos para o Toast (Mini-Carrinho) */
 #toast-container {
     position: fixed;
     bottom: 20px;
@@ -400,7 +400,6 @@ footer {
     background-color: #dc3545;
 }
 
-/* Estilos para as páginas Sobre e Contato */
 .page-content {
     padding-top: 20px;
 }
@@ -417,7 +416,6 @@ footer {
     margin-bottom: 15px;
 }
 
-/* Estilos específicos do Contato */
 .contato-info p {
     display: flex;
     align-items: center;
@@ -431,60 +429,67 @@ footer {
 }
 
 .contato-form {
-    margin-top: 30px;
-    background-color: #fdfdfd;
-    border: 1px solid #eee;
-    border-radius: 8px;
-    padding: 25px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 30px 25px;
+}
+
+.contato-form h3 {
+    text-align: center;
+    color: #2e7d32;
+    margin-bottom: 25px;
 }
 
 .form-grupo {
-    margin-bottom: 15px;
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
 }
 
-.form-grupo label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #555;
-}
-
-.form-grupo input[type="text"],
-.form-grupo input[type="email"],
-.form-grupo textarea {
-    width: calc(100% - 20px);
-    padding: 10px;
+.contato-form input,
+.contato-form textarea {
+    padding: 10px 12px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 6px;
     font-size: 1em;
-    box-sizing: border-box;
+    background: #f9f9f9;
+    resize: none;
+    transition: border-color 0.2s;
 }
 
-.form-grupo textarea {
-    resize: vertical;
-    min-height: 100px;
+.contato-form input:focus,
+.contato-form textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
 }
 
-.btn-enviar-mensagem {
-    background-color: #007bff;
+.contato-form textarea {
+    min-height: 80px;
+    max-width: 100%;
+}
+
+.btn-finalizar-compra {
+    background-color: #28a745;
     color: white;
     border: none;
     border-radius: 5px;
-    padding: 12px 20px;
+    padding: 12px 25px;
     font-size: 1.1em;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.btn-enviar-mensagem:hover {
-    background-color: #0056b3;
+.btn-finalizar-compra:hover {
+    background-color: #218838;
 }
 
 
-/* Media Queries para responsividade */
-@media (max-width: 900px) { /* Ajuste o breakpoint conforme necessário */
+@media (max-width: 900px) {
     :root {
-        --carroussel-display-count: 2; /* Em telas médias, exibe 2 itens */
+        --carroussel-display-count: 2;
     }
 }
 
@@ -494,52 +499,63 @@ footer {
         height: auto;
         padding-bottom: 15px;
     }
+
     header nav ul {
         flex-direction: column;
         align-items: center;
         gap: 10px;
         margin-top: 15px;
     }
+
     .carrinho-div {
         margin-top: 15px;
     }
+
     .carrossel-btn {
         padding: 10px 5px;
         font-size: 1.2em;
     }
+
     .carrossel-container {
         padding: 0 30px;
     }
+
     .produto-carrossel {
         min-width: 200px;
     }
+
     .item-carrinho {
         flex-wrap: wrap;
         justify-content: center;
         text-align: center;
     }
+
     .item-carrinho span:nth-of-type(1) {
         flex-basis: 100%;
         margin-top: 5px;
     }
+
     .toast-notificacao {
         width: calc(100% - 40px);
         left: 20px;
         right: 20px;
         bottom: 10px;
     }
+
     .toast-notificacao.hide {
         transform: translateY(100%);
     }
+
     .conteudo-pagina {
         padding: 20px;
     }
 
-    /* Responsividade do Carrossel para mobile */
+
     :root {
-        --carroussel-display-count: 1; /* Em telas pequenas, exibe 1 item */
+        --carroussel-display-count: 1;
     }
+
     .produto-carrossel {
-        min-width: unset; /* Remove min-width fixo */
+        min-width: unset;
     }
 }

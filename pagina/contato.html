@@ -22,52 +22,48 @@
         </li>
       </ul>
     </nav>
-    <a href="home.html#carrinho" class="carrinho-div"> <i class="fas fa-shopping-cart"></i>
+    <a href="carrinho.html" class="carrinho-div">
+      <i class="fas fa-shopping-cart"></i>
       <span id="contador-carrinho" class="contador-carrinho">0</span>
     </a>
   </header>
 
   <main class="page-content">
-    <section class="conteudo-pagina">
-      <h2>Fale Conosco</h2>
-      <p>Tem alguma dúvida, sugestão ou precisa de ajuda? Entre em contato conosco pelos canais abaixo:</p>
-      
-      <div class="contato-info">
-        <p><i class="fas fa-envelope"></i> E-mail: <a href="mailto:contato@emporiolumo.com.br">contato@emporiolumo.com.br</a></p>
-        <p><i class="fas fa-phone"></i> Telefone: (XX) XXXX-XXXX</p>
-        <p><i class="fab fa-whatsapp"></i> WhatsApp: (XX) XXXXX-XXXX</p>
-        <p><i class="fas fa-map-marker-alt"></i> Endereço: Rua dos Sabores, 123 - Centro, Sua Cidade - UF</p>
-      </div>
-
       <div class="contato-form">
         <h3>Envie uma Mensagem</h3>
         <form>
-          <div class="form-grupo">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
-          </div>
-          <div class="form-grupo">
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          <div class="form-grupo">
-            <label for="assunto">Assunto:</label>
-            <input type="text" id="assunto" name="assunto">
-          </div>
-          <div class="form-grupo">
-            <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
-          </div>
-          <button type="submit" class="btn-enviar-mensagem">Enviar Mensagem</button>
+            <div class="form-grupo">
+                <input type="text" id="nome" placeholder="Nome" required>
+            </div>
+            <div class="form-grupo">
+                <input type="text" id="cep" placeholder="CEP" required>
+            </div>
+            <div class="form-grupo">
+                <input type="text" id="rua" placeholder="Rua" readonly>
+            </div>
+            <div class="form-grupo">
+                <input type="text" id="bairro" placeholder="Bairro" readonly>
+            </div>
+            <div class="form-grupo">
+                <input type="text" id="cidade" placeholder="Cidade" readonly>
+            </div>
+            <div class="form-grupo">
+                <input type="text" id="estado" placeholder="Estado" readonly>
+            </div>
+            <div class="form-grupo">
+                <textarea name="Assunto" id="assunto" placeholder="Assunto ..." required></textarea>
+            </div>
+            <div class="form-grupo">
+                <button type="submit" class="btn-finalizar-compra">Enviar Mensagem</button>
+            </div>
         </form>
       </div>
-    </section>
   </main>
   
   <footer>
     <span>&copy; 2025 EMPÓRIO LUMO - Todos os direitos reservados.</span>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script2.js"></script>
 </body>
 </html>

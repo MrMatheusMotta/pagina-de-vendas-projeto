@@ -62,21 +62,6 @@
     "DETALHE": "500g",
     "IMAGEM": "img/mix-crocante.png",
     "OFERTA": true
-  },
-  {
-    "ID": 9,
-    "PRODUTO": "Semente de Abóbora",
-    "PRECO": 20.0,
-    "DETALHE": "500g",
-    "IMAGEM": "img/semente-de-abobora.png",
-    "OFERTA": false
-  },
-  {
-    "ID": 10,
-    "PRODUTO": "Soja",
-    "PRECO": 15.0,
-    "DETALHE": "500g",
-    "IMAGEM": "img/soja.jpg",
-    "OFERTA": false
   }
+ 
 ]

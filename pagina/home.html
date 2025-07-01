@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,13 +8,15 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
 
   <header class="header-com-logo">
     <nav>
       <ul>
         <li class="linkHeader">
-          <a href="home.html"><img src="./icons/casa.png" alt="Ícone de Casa" />Início</a> </li>
+          <a href="home.html"><img src="./icons/casa.png" alt="Ícone de Casa" />Início</a>
+        </li>
         <li class="linkHeader">
           <a href="sobre.html"><img src="./icons/coracao.png" alt="Ícone de Coração" />Sobre</a>
         </li>
@@ -22,48 +25,39 @@
         </li>
       </ul>
     </nav>
-    <a href="#carrinho" class="carrinho-div">
+    <a href="carrinho.html" class="carrinho-div">
       <i class="fas fa-shopping-cart"></i>
       <span id="contador-carrinho" class="contador-carrinho">0</span>
     </a>
   </header>
-
+  <section class="secao-carrossel">
+    <h2>Produtos em Oferta</h2>
+    <div class="carrossel-container">
+      <button class="carrossel-btn prev"><i class="fas fa-chevron-left"></i></button>
+      <div class="carrossel-produtos" id="carrossel-produtos">
+      </div>
+      <button class="carrossel-btn next"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </section>
   <main>
     <section class="secao-loja">
       <h2>Nosso Catálogo</h2>
       <div id="loja">
-        </div>
+      </div>
     </section>
 
-    <section class="secao-carrinho" id="carrinho">
-      <h2>Seu Carrinho de Compras</h2>
-      <div id="itens-carrinho">
-        <p>Seu carrinho está vazio.</p>
-      </div>
-      <div class="total-carrinho">
-        <p>Total: <span id="valor-total-carrinho">R$ 0,00</span></p>
-        <button class="btn-finalizar-compra">Finalizar Compra</button>
-      </div>
-    </section>
-    
-    <section class="secao-carrossel">
-      <h2>Produtos em Oferta</h2>
-      <div class="carrossel-container">
-        <button class="carrossel-btn prev"><i class="fas fa-chevron-left"></i></button>
-        <div class="carrossel-produtos" id="carrossel-produtos">
-          </div>
-        <button class="carrossel-btn next"><i class="fas fa-chevron-right"></i></button>
-      </div>
-    </section>
+
+
 
   </main>
-  
+
   <footer>
     <span>&copy; 2025 EMPÓRIO LUMO - Todos os direitos reservados.</span>
   </footer>
 
   <div id="toast-container"></div>
-  
+
   <script src="script.js"></script>
 </body>
+
 </html>

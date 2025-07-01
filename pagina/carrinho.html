@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sobre Nós - EMPÓRIO LUMO</title>
+  <title>EMPÓRIO LUMO</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -22,24 +22,29 @@
         </li>
       </ul>
     </nav>
-    <a href="carrinho.html" class="carrinho-div"> <i class="fas fa-shopping-cart"></i>
+    <a href="carrinho.html" class="carrinho-div">
+      <i class="fas fa-shopping-cart"></i>
       <span id="contador-carrinho" class="contador-carrinho">0</span>
     </a>
   </header>
 
-  <main class="page-content">
-    <section class="conteudo-pagina">
-      <h2>Sobre o EMPÓRIO LUMO</h2>
-      <p>Bem-vindo ao Empório Lumo, seu destino para os melhores produtos naturais, frescos e de alta qualidade. Nossa missão é trazer para sua mesa uma seleção cuidadosa de grãos, sementes, castanhas e outros alimentos que promovem saúde e bem-estar.</p>
-      <p>Acreditamos que uma alimentação saudável é a base para uma vida plena. Por isso, trabalhamos diretamente com produtores que compartilham nossos valores de sustentabilidade, respeito ao meio ambiente e qualidade superior.</p>
-      <p>Explore nosso catálogo e descubra uma variedade de opções para enriquecer suas refeições, lanches e receitas. No Empório Lumo, sua satisfação e saúde são nossa prioridade.</p>
+ <section class="secao-carrinho" id="carrinho">
+      <h2>Seu Carrinho de Compras</h2>
+      <div id="itens-carrinho">
+        <p>Seu carrinho está vazio.</p>
+      </div>
+      <div class="total-carrinho">
+        <p>Total: <span id="valor-total-carrinho">R$ 0,00</span></p>
+        <button class="btn-finalizar-compra">Finalizar Compra</button>
+      </div>
     </section>
-  </main>
-  
-  <footer>
+    
+<footer>
     <span>&copy; 2025 EMPÓRIO LUMO - Todos os direitos reservados.</span>
   </footer>
 
-  <script src="script.js"></script> 
+  <div id="toast-container"></div>
+  
+  <script src="script.js"></script>
 </body>
 </html>
