@@ -4,12 +4,12 @@
     "PRODUTO": "Grão tal",
     "PRECO": "60.89",
     "DETALHE": "CASTANHA DO PARÁ",
-    "IMAGEM": "img/castanha-para.jpg",
+    "IMAGEM": "",
 
     "ID": 2,
     "PRODUTO": "Grão tal",
     "PRECO": "150.00",
     "DETALHE": "CASTANHA DE CAJU",
-    "IMAGEM": "img/castanha-caju.jpg"
+    "IMAGEM":""
   }
 ]
